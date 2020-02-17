@@ -35,35 +35,80 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         startnewRound()
+        
+        startNewGame()
     }
     
     // For the button.
     @IBAction func showAlert()
     {
         let difference = abs(targetValue - currentValue)
-        let points = 100 - difference
+        var points = 100 - difference
+        
+        score += points
+        
+        // Changing title based on player. If they were close, then we return a feedback indicating on how well they did.
+        let title: String
+        if difference == 0
+        {
+            title = "Perfect!"
+            points += 100
+        }
+        else if difference < 5
+        {
+            title = "You're really close!"
+            
+            if difference == 1
+            {
+                points += 50
+            }
+        }
+        else if difference < 10
+        {
+            title = "Not bad!"
+        }
+        else
+        {
+            title = "Not close at all"
+        }
         
         score += points
         
         let message = "You scored \(points) points"
         //let message = "The value of the slider is: \(currentValue)" +  "\nThe target value is: \(targetValue)"
         
-        let alert = UIAlertController(title: "Hello, World",
+        let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok",
+//        let action = UIAlertAction(title: "Ok",
+//                                   style: .default,
+//                                   handler:nil)
+        
+        // Changing handler event to actually do something. In this case, start the new round again.
+        let action = UIAlertAction(title: "OK",
                                    style: .default,
-                                   handler:nil)
+                                   handler: {_ in
+                                    self.startnewRound()
+                                    })
+        
         alert.addAction(action)
+        
         present(alert, animated: true, completion: nil)
         
-        startnewRound()
     }
     
     // For the slider. Reading data on the slider.
     @IBAction func sliderMoved(_ slider: UISlider)
     {
         currentValue = lroundf(slider.value)
+    }
+    
+    // Action handler to handle taps on start over button.
+    @IBAction func startNewGame()
+    {
+        score = 0
+        round = 0
+        startnewRound()
     }
     
     func startnewRound()
@@ -84,6 +129,5 @@ class ViewController: UIViewController
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
     }
-    
 }
 
