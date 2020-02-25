@@ -37,6 +37,25 @@ class ViewController: UIViewController
         startnewRound()
         
         startNewGame()
+        
+        // Chapter 19 - Importing images for slider.
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
+        slider.setThumbImage(thumbImageNormal, for: .highlighted)
+        
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")!
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let track_left_image = UIImage(named: "SliderTrackLeft")!
+        let track_left_resizeable = track_left_image.resizableImage(withCapInsets: insets)
+        
+        slider.setMinimumTrackImage(track_left_resizeable, for: .normal)
+        
+        let track_right_image = UIImage(named: "SliderTrackRight")!
+        let track_right_resizable = track_right_image.resizableImage(withCapInsets: insets)
+        
+        slider.setMaximumTrackImage(track_right_resizable, for: .normal)
     }
     
     // For the button.
@@ -129,5 +148,6 @@ class ViewController: UIViewController
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
     }
+    
 }
 
