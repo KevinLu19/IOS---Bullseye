@@ -6,5 +6,10 @@ given hands on how to add labels/buttons/sliders onto storyboard. Also connectin
 "methods" which make these labels/buttons/sliders function.
 
 ## Screenshots
+Pictures without graphics added
 ![Default Game View](https://raw.githubusercontent.com/KevinLu19/IOS---Bullseye/master/screenshots/picture1.jpg)
 ![Feedback pop-up](https://raw.githubusercontent.com/KevinLu19/IOS---Bullseye/master/screenshots/picture2.jpg)
+
+Pictures after graphcis added 
+![Default View](https://raw.githubusercontent.com/KevinLu19/IOS---Bullseye/master/screenshots/picture3.png)
+![Feedback pop-up](https://raw.githubusercontent.com/KevinLu19/IOS---Bullseye/master/screenshots/picture4.png)
