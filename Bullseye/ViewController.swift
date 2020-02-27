@@ -40,23 +40,23 @@ class ViewController: UIViewController
         
         // Chapter 19 - Importing images for slider.
         let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
-        slider.setThumbImage(thumbImageNormal, for: .highlighted)
+        slider.setThumbImage(thumbImageNormal, for: .normal)
         
         let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")!
         slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
         
         let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
         
-        let track_left_image = UIImage(named: "SliderTrackLeft")!
-        let track_left_resizeable = track_left_image.resizableImage(withCapInsets: insets)
+        let trackLeftImage = UIImage(named: "SliderTrackLeft")!
+        let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
         
-        slider.setMinimumTrackImage(track_left_resizeable, for: .normal)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         
-        let track_right_image = UIImage(named: "SliderTrackRight")!
-        let track_right_resizable = track_right_image.resizableImage(withCapInsets: insets)
+        let trackRightImage = UIImage(named: "SliderTrackRight")!
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
         
-        slider.setMaximumTrackImage(track_right_resizable, for: .normal)
-    }
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+}
     
     // For the button.
     @IBAction func showAlert()
