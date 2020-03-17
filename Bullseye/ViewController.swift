@@ -46,15 +46,12 @@ class ViewController: UIViewController
         slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
         
         let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
-        
         let trackLeftImage = UIImage(named: "SliderTrackLeft")!
         let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
-        
         slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         
         let trackRightImage = UIImage(named: "SliderTrackRight")!
         let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
-        
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
 }
     
@@ -125,6 +122,8 @@ class ViewController: UIViewController
     // Action handler to handle taps on start over button.
     @IBAction func startNewGame()
     {
+        addHighScore(score)
+        
         score = 0
         round = 0
         startnewRound()
@@ -147,6 +146,26 @@ class ViewController: UIViewController
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
+    }
+    
+    func addHighScore(_ score:Int)
+    {
+        // 1
+        guard score > 0 else
+        {
+            return;
+        }
+        
+        // 2
+        let highscore = HighScoreItem()
+        highscore.score = score
+        highscore.name = "Unknown"
+        
+        // 3
+        var highScores = PersistencyHelper.loadHighScores()
+        highScores.append(highscore)
+        highScores.sort { $0.score > $1.score }
+        PersistencyHelper.saveHighScores(highScores)
     }
     
 }

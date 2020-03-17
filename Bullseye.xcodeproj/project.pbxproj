@@ -13,6 +13,11 @@
 		A75FCCE823E92B8200CE38BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75FCCE623E92B8200CE38BC /* Main.storyboard */; };
 		A75FCCEA23E92B8500CE38BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75FCCE923E92B8500CE38BC /* Assets.xcassets */; };
 		A75FCCED23E92B8500CE38BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75FCCEB23E92B8500CE38BC /* LaunchScreen.storyboard */; };
+		A762259024201F0400B7BC5A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762258F24201F0400B7BC5A /* AboutViewController.swift */; };
+		A7622592242028DB00B7BC5A /* HighScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7622591242028DB00B7BC5A /* HighScoresTableViewController.swift */; };
+		A76225942420376C00B7BC5A /* HighScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76225932420376C00B7BC5A /* HighScoreItem.swift */; };
+		A762259624204B7300B7BC5A /* PersistencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762259524204B7300B7BC5A /* PersistencyHelper.swift */; };
+		A76225982420593D00B7BC5A /* EditHighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76225972420593D00B7BC5A /* EditHighScoresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		A75FCCE923E92B8500CE38BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75FCCEC23E92B8500CE38BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75FCCEE23E92B8500CE38BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A762258F24201F0400B7BC5A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A7622591242028DB00B7BC5A /* HighScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresTableViewController.swift; sourceTree = "<group>"; };
+		A76225932420376C00B7BC5A /* HighScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreItem.swift; sourceTree = "<group>"; };
+		A762259524204B7300B7BC5A /* PersistencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyHelper.swift; sourceTree = "<group>"; };
+		A76225972420593D00B7BC5A /* EditHighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHighScoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +70,14 @@
 				A75FCCE223E92B8200CE38BC /* SceneDelegate.swift */,
 				A75FCCE423E92B8200CE38BC /* ViewController.swift */,
 				A75FCCE623E92B8200CE38BC /* Main.storyboard */,
+				A762258F24201F0400B7BC5A /* AboutViewController.swift */,
+				A7622591242028DB00B7BC5A /* HighScoresTableViewController.swift */,
 				A75FCCE923E92B8500CE38BC /* Assets.xcassets */,
 				A75FCCEB23E92B8500CE38BC /* LaunchScreen.storyboard */,
 				A75FCCEE23E92B8500CE38BC /* Info.plist */,
+				A76225932420376C00B7BC5A /* HighScoreItem.swift */,
+				A762259524204B7300B7BC5A /* PersistencyHelper.swift */,
+				A76225972420593D00B7BC5A /* EditHighScoresViewController.swift */,
 			);
 			path = Bullseye;
 			sourceTree = "<group>";
@@ -138,8 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7622592242028DB00B7BC5A /* HighScoresTableViewController.swift in Sources */,
+				A76225942420376C00B7BC5A /* HighScoreItem.swift in Sources */,
+				A762259624204B7300B7BC5A /* PersistencyHelper.swift in Sources */,
 				A75FCCE523E92B8200CE38BC /* ViewController.swift in Sources */,
 				A75FCCE123E92B8200CE38BC /* AppDelegate.swift in Sources */,
+				A76225982420593D00B7BC5A /* EditHighScoresViewController.swift in Sources */,
+				A762259024201F0400B7BC5A /* AboutViewController.swift in Sources */,
 				A75FCCE323E92B8200CE38BC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
